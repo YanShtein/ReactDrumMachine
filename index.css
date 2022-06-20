@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400&display=swap");
+
+:root {
+  --orange-pad: #fe9e3f;
+  --yellow-pad: #fae13c;
+  --lightblue-pad: #44fff4;
+  --red-pad: #fd3232;
+  --blue-pad: #3cc3fc;
+  --background-orange: radial-gradient(circle, #f9dba4 0%, #fe9e3f 70%);
+  --background-yellow: radial-gradient(circle, #fef2a3 0%, #fae13c 70%);
+  --background-lightblue: radial-gradient(circle, #c1fffb 0%, #44fff4 70%);
+  --background-red: radial-gradient(circle, #f19595 0%, #fd3232 70%);
+  --background-blue: radial-gradient(circle, #a2dff9 0%, #3cc3fc 70%);
+  --background-drum: #303030;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: 'Anek Malayalam', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #efe8e8;
+}
+
+.drum-container {
+  display: grid;
+  grid-template-columns: 80px 80px 300px 80px;
+  grid-template-rows: 90px 320px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  padding: 20px;
+  padding-right: 30px;
+  background-image: url('./back.png');
+  /* background-color: #35363a; */
+  box-shadow: rgb(51, 51, 51) 1px 5px 10px;
+  border: 1px solid #242424;
+  border-radius: 3px;
+}
+
+.logo {
+  position: relative;
+  top: 8px;
+  right: 8px;
+  background-image: linear-gradient(260deg, #4c33ef,#df1d1d, #e6bb12 ,#0fe0ef,#32e017);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.display {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: #27262b;
+  box-shadow: #202024 1px 1px 2px 2px;
+  height: 75px;
+  width: 380px;
+  margin-left: 5px;
+  border-radius: 3px;
+  color: white;
+}
+
+.inner-display {
+  background-image: url('./wave.png');
+  background-position: center;
+  /* background-color: #0e0e0e; */
+  margin: 5px 5px;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.vol {
+  font-size: inherit;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.name {
+  font-size: inherit;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.power {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  left: 40px;
+  background-color: #1f1f21;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  border-radius: 3px;
+  position: relative;
+  user-select: none;
+  font-size: 22px;
+}
+
+.off {
+  text-align: center;
+  color: red;
+  box-shadow: 1px 1px 4px 1px rgba(240, 5, 5, 0.5);
+}
+
+.on {
+  text-align: center;
+  color: rgb(9, 228, 163);
+  box-shadow: rgb(9, 228, 163) 1px 1px 5px 2px;
+}
+
+.volume {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 100%;
+  background: #919191;
+  border-radius: 5px;
+  transform: rotate(270deg);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 20px;
+  border-radius: 3px;
+  background: #161616;
+  cursor: grab;
+  border: 2px solid black;
+}
+
+.pad-bank {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 32% 32% 32%;
+  gap: 7px 7px;
+}
+
+.drum-pad {
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.drum-pad small {
+  position: absolute;
+  font-size: 12px;
+  top: 0;
+  left: 3px;
+  user-select: none;
+}
+
+#Heater-1:active,
+#Heater-2:active,
+#Heater-3:active,
+#Clap:active,
+#Snare:active,
+#Open-Hat:active,
+#Beat:active,
+#Closed-Hat:active,
+#Kick:active {
+  background: white;
+  box-shadow: 1px 2px 10px 0.1px white;
+}
+
+#Heater-1 {
+  background: var(--background-orange);
+  box-shadow: var(--orange-pad) 1px 1px 2px;
+}
+#Heater-2 {
+  background: var(--background-orange);
+  box-shadow: var(--orange-pad) 1px 1px 2px;
+}
+#Heater-3 {
+  background: var(--background-orange);
+  box-shadow: var(--orange-pad) 1px 1px 2px;
+}
+#Clap {
+  background: var(--background-yellow);
+  box-shadow: var(--yellow-pad) 1px 1px 2px;
+}
+#Snare {
+  background: var(--background-yellow);
+  box-shadow: var(--yellow-pad) 1px 1px 2px;
+}
+#Open-Hat {
+  background: var(--background-lightblue);
+  box-shadow: var(--lightblue-pad) 1px 1px 2px;
+}
+#Beat {
+  background: var(--background-red);
+  box-shadow: var(--red-pad) 1px 1px 2px;
+}
+#Closed-Hat {
+  background: var(--background-yellow);
+  box-shadow: var(--yellow-pad) 1px 1px 2px;
+}
+#Kick {
+  background: var(--background-blue);
+  box-shadow: var(--blue-pad) 1px 1px 2px;
+}
