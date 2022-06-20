@@ -22,7 +22,7 @@ Finally class -App- holds initial states for the drum power, array, display pad 
 The PowerControl method initial state set to true, so the page will start with drum ON.
 than each object will be bound to PowerControl method, otherwise all is off.
 
-https://github.com/YanShtein/ReactDrumMachine/blob/main/DrumPad.png
+![Screenshot](DrumPad.png)
 
 
 Results --> 
