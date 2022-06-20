@@ -4,6 +4,7 @@ FreeCodeCamp project: building 'React Drum Machine' --> <br/>
 https://www.freecodecamp.org/learn/front-end-development-libraries/#react-and-redux
 
 This project uses React to build a drum machine.
+
 <b>Project functionality:</b>
 - Drum consists of volume controller which controlles the sound of the played pads.
 - When clicking each individual drum pad it triggers an audio tag which than plays the src audio.
