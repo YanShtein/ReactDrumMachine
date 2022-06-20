@@ -6,46 +6,55 @@ import './index.css';
 
 const bankArr = [
   {
+    keyCode: 81,
     keytrigger: 'Q',
     padid: 'Heater-1',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
   },
   {
+    keyCode: 87,
     keytrigger: 'W',
     padid: 'Heater-2',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
   },
   {
+    keyCode: 69,
     keytrigger: 'E',
     padid: 'Heater-3',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
   },
   {
+    keyCode: 65,
     keytrigger: 'A',
     padid: 'Clap',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
   },
   {
+    keyCode: 83,
     keytrigger: 'S',
     padid: 'Snare',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
   },
   {
+    keyCode: 68,
     keytrigger: 'D',
     padid: 'Open-Hat',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
   },
   {
+    keyCode: 90,
     keytrigger: 'Z',
     padid: 'Beat',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
   },
   {
+    keyCode: 88,
     keytrigger: 'X',
     padid: 'Closed-Hat',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
   },
   {
+    keyCode: 67,
     keytrigger: 'C',
     padid: 'Kick',
     url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
@@ -57,6 +66,20 @@ class Referencer extends React.Component {
     super(props);
 
     this.playSound = this.playSound.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  };
+  
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyPress);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress);
+  }
+  
+  handleKeyPress(event) {
+    if (event.keyCode === this.props.keyCode) {
+      this.playSound();
+    };
   };
 
   playSound() {
@@ -92,6 +115,7 @@ class PadBank extends React.Component {
           key={item.padid} 
           Url={item.url} PadId={item.padid} 
           KeyTrigger={item.keytrigger} 
+          keyCode={item.keyCode}
           updateDisplayName={this.props.updateDisplayName}
           power={this.props.power}/>
         );
@@ -190,5 +214,4 @@ class App extends React.Component {
 };
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
