@@ -16,7 +16,7 @@ The code has an array of keytrigger objects which I use later to map on for the 
 A -Referencer- class which holds playSound method that when Drum is ON, the sound will play, and display will be updated accordingly with the triggered key pad name.
 Ths class will render props for the div classes and id's to return next in class PadBank.
   
-A -PadBank- class maps over the Array objects and returns withing the -Referencer- class, for each their own properties. finally -PadBank- will return the whole <div> parentfor the drum pads.
+A -PadBank- class maps over the Array objects and returns withing the -Referencer- class, for each their own properties. finally -PadBank- will return the whole <div> parent set up for drum pads.
   
 Finally class -App- holds initial states for the drum power, array, display pad name, and initial volume.
  
