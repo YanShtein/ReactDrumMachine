@@ -20,7 +20,7 @@ A -PadBank- class maps over the Array objects and returns withing the -Reference
   
 Finally class -App- holds initial states for the drum power, array, display pad name, and initial volume.
  
-The PowerControl initialy set to true, so the page will start with drum ON.
+The PowerControl method initial state set to true, so the page will start with drum ON.
 than each object will be bound to PowerControl method, otherwise all is off.
 
 
