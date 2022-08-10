@@ -1,7 +1,6 @@
 # ReactDrumMachine
 
-FreeCodeCamp project: building 'React Drum Machine' --> <br/>
-https://www.freecodecamp.org/learn/front-end-development-libraries/#react-and-redux
+<h2><a href="https://codepen.io/yansht/pen/GRQaJQr" rel="nofollow">Live Demo</a></h2>
 
 This project uses React to build a drum machine.
 
@@ -24,6 +23,5 @@ than each object will be bound to PowerControl method, otherwise all is off.
 
 ![Screenshot](DrumPad.png)
 
-
-Results --> 
-https://codepen.io/yansht/pen/GRQaJQr
+FreeCodeCamp project: building 'React Drum Machine' --> <br/>
+https://www.freecodecamp.org/learn/front-end-development-libraries/#react-and-redux
